@@ -84,7 +84,7 @@ header h1 {
   top:0;
   height:100%;
   width: 90%;
-  transform: translateX(-100%);
+  transform: translateX(-101%);
   transition: all 0.3s ease-out;
   z-index:3;
 }
