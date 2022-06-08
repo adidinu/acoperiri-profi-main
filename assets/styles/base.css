@@ -195,9 +195,6 @@ header .logo {
 	font-size: 20px;
 	transition: all 0.2s ease;
 }
-.nav .js-menu-rel:nth-of-type(2) .js-open-menu a {
-	margin-right: 8px;
-}
 .nav .js-open-menu:hover {
 	background: white;
 }
