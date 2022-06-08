@@ -36,6 +36,7 @@ main .wrapper {
   position: relative;
 }
 .contact .btn{
+  cursor:pointer;
   outline:none;
   background:#e27822;
   border: 1px solid #222;
