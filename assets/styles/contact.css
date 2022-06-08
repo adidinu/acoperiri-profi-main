@@ -117,7 +117,7 @@ main .wrapper {
   .contact-wrapper{
     flex-flow: column nowrap;
   }
-  .contact-form, .contact-info{
+  .contact-wrapper .contact-form, .contact-wrapper .contact-info{
     width:100%;
   }
   .contact{
@@ -137,5 +137,16 @@ main .wrapper {
   }
   .contact-wrapper:after{
     display:none;
+  }
+}
+@media only screen and (max-width: 500px){
+  .contact .input-wrapper{
+    grid-template-rows: max-content 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+  .contact .btn-wrapper{
+    row-gap:0;
+    margin-top:16px;
   }
 }
