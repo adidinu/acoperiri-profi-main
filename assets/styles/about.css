@@ -1,0 +1,39 @@
+main {
+	padding: 40px 0 80px 0;
+}
+main .about .about-title {
+	margin-bottom: 24px;
+  font-size: 28px;
+}
+main .about .about-section:not(:first-of-type) .about-title {
+	margin-top: 8px;
+}
+main .about .about-section:last-of-type .about-title {
+	margin-top: 18px;
+}
+main .about ul{
+  margin-bottom:30px;
+}
+main .about .about-text {
+	margin-bottom: 18px;
+  line-height:24px;
+}
+main .about li {
+	position: relative;
+	margin-bottom: 18px;
+	padding-left: 24px;
+}
+main .about li:after {
+	font-family: 'FontAwesome';
+	content: '\f55d';
+	position: absolute;
+	left: 0;
+}
+main .about .about-text + h3 {
+	margin-bottom: 18px;
+}
+@media only screen and (max-width: 765px){
+  main {
+    padding: 30px 0 40px 0;
+  }
+}

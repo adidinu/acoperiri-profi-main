@@ -1,0 +1,115 @@
+main .wrapper {
+	padding: 40px 0 80px;
+}
+.breadcrumbs{
+  display:flex;
+  width:100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 0px;
+  margin-bottom:24px;
+  border-bottom: 1px solid #222;
+}
+.breadcrumbs p a{
+  font-size: 16px;
+  color:inherit;
+}
+.breadcrumbs p.home{
+  padding-right: 24px;
+  position: relative;
+}
+.breadcrumbs p.home:after{
+  content:'\f054';
+  font-family: "FontAwesome";
+  position: absolute;
+  font-size: 14px;
+  right: 8px;
+  top:50%;
+  transform: translateY(-50%);
+}
+.breadcrumbs p.product a{
+  opacity: 0.8;
+}
+.product{
+  display:flex;
+  gap: 30px;
+}
+.product-wrapper{
+  display:flex;
+  flex-flow: column nowrap;
+  gap: 60px;
+}
+.other-images{
+  display:grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4,1fr);
+  row-gap: 30px;
+  column-gap: 20px;
+  width:100%;
+}
+.other-images img{
+  max-height: 50vh;
+  width:100%;
+}
+.product .product-img{
+  display:flex;
+  width: 40%;
+}
+.product .product-img img{
+  width:100%;
+  max-width:unset;
+  max-height:50vh;
+}
+.product-info{
+  display:flex;
+  width: 60%;
+}
+.product-info .title{
+  font-weight: 800;
+  font-size: 30px;
+  padding: 10px 8px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  width:fit-content;
+  margin-bottom: 18px;
+}
+.product-info .description{
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+.product-info .contact a{
+  display:inline-flex;
+  width:max-content;
+  padding: 0 8px;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  color:inherit;
+}
+@media only screen and (max-width: 990px){
+  .product{
+    flex-flow: column nowrap;
+  }
+  .product .product-info,
+  .product .product-img{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 765px){
+  main .wrapper{
+    padding: 30px 0 60px;
+  }
+  .product-info .title{
+    font-size: 28px;
+  }
+  .product-info .contact a{
+    width:100%;
+    justify-content: center;
+  }
+  .other-images{
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 20px;
+  }
+}
