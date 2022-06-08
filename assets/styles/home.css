@@ -168,9 +168,10 @@ main .wrapper {
 	.menu .product-list {
 		display: flex;
 		flex-flow: row wrap;
+    column-gap:24px;
 	}
 	.menu .product-list li {
-		width: 50%;
+		width: calc(50% - 12px);
 	}
 }
 @media only screen and (max-width: 765px) {
@@ -184,8 +185,11 @@ main .wrapper {
 		max-height: 350px;
 	}
 }
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 500px){
   .menu .product-list li{
     width:100%;
+  }
+  .menu .product-list{
+    column-gap:0;
   }
 }
