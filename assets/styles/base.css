@@ -86,7 +86,7 @@ header h1 {
   width: 90%;
   transform: translateX(-101%);
   transition: all 0.3s ease-out;
-  z-index:3;
+  z-index:5;
 }
 .mobile-nav .mobile-popup.show{
   transform: translateX(0);
@@ -108,7 +108,7 @@ body.overlay:after{
   width:100vw;
   height:100vh;
   background:rgba(0,0,0,0.5);
-  z-index:2;
+  z-index:3;
 }
 .mobile-nav li{
   font-size: 24px;
@@ -119,6 +119,10 @@ body.overlay:after{
   flex-flow:column;
   background-color: #e27822;
   align-items: flex-start;
+}
+.mobile-nav .mobile-popup a, 
+.mobile-nav .mobile-popup a:visited{
+  color:white;
 }
 header .logo {
 	width: 220px;
@@ -224,10 +228,32 @@ header .logo {
 	padding: 12px 24px;
 	cursor: pointer;
 }
+.mobile-nav .mobile-popup li{
+  width:100%;
+  margin-bottom:0;
+  position: relative;
+}
+.mobile-nav .mobile-popup li a:after{
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+}
+.mobile-nav .mobile-popup li:after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:2px;
+  background:#f89b4f;
+}
 .nav-wrapper.sticky{
   position:fixed;
   top:0;
-  z-index:10;
+  z-index:3;
 }
 
 footer {

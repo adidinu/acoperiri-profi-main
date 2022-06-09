@@ -27,12 +27,18 @@ closeMobileMenu.addEventListener('click', (e) =>{
 })
 
 window.addEventListener('scroll', () => {
-  if(window.scrollY > header.offsetHeight){
-    navWrapper.classList.add('sticky');
-    document.querySelector('header + *').style.paddingTop = navWrapper.offsetHeight + "px";
+  if(navWrapper.classList.contains('sticky')){
+    if(window.scrollY <= header.offsetHeight){
+      console.log(header.offsetHeight, navWrapper.offsetHeight, window.scrollY, ' closed');
+        navWrapper.classList.remove('sticky');
+        document.querySelector('header + *').style.paddingTop = "";
+    }
   }
   else{
-    navWrapper.classList.remove('sticky');
-    document.querySelector('header + *').style.paddingTop = "";
+    if(window.scrollY > header.offsetHeight - navWrapper.offsetHeight){
+      console.log(header.offsetHeight, navWrapper.offsetHeight, window.scrollY, ' opened');
+        navWrapper.classList.add('sticky');
+        document.querySelector('header + *').style.paddingTop = navWrapper.offsetHeight + "px";
+      }
   }
 })
