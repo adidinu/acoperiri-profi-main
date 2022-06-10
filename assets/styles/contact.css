@@ -51,6 +51,60 @@ main .wrapper {
   justify-content: center;
   width: max-content;
 }
+.contact .input-wrapper.textarea > div{
+  display:flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+}
+.contact .char-count{
+  opacity:0.8;
+}
+.input-wrapper.error{
+  position: relative;
+}
+.contact-form .contact .input-wrapper .error-count{
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 25%;
+  z-index:3;
+  display:none;
+  flex-flow: row nowrap;
+  gap:6px;
+  border: 2px solid red;
+  color:red;
+  border-radius: 6px;
+  padding: 2px 4px;
+  justify-content: flex-start;
+  align-items: center;
+  background:white;
+}
+.contact-form .contact .input-wrapper .error-count.show{
+  display:flex;
+}
+.error-count:after{
+  content:'';
+  position: absolute;
+  left:12px;
+  top:100%;
+  width:0;
+  height:0;
+  z-index:1;
+  border-left:13px solid transparent;
+  border-right:13px solid transparent;
+  border-top:13px solid red;
+}
+.error-count:before{
+  content:'';
+  position: absolute;
+  left:15px;
+  z-index:2;
+  top:100%;
+  width:0;
+  height:0;
+  border-left:10px solid transparent;
+  border-right:10px solid transparent;
+  border-top:10px solid white;
+}
 .contact-wrapper:after{
   content:'';
   width: 2px;
@@ -114,6 +168,9 @@ main .wrapper {
   margin-left: 12px;
 }
 @media only screen and (max-width: 765px){
+  .contact-form .contact .input-wrapper .error-count{
+    bottom: calc(100% - 25px);
+  }
   .contact-wrapper{
     flex-flow: column nowrap;
   }
