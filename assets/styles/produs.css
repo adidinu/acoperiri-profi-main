@@ -47,10 +47,6 @@ main .wrapper {
   column-gap: 20px;
   width:100%;
 }
-.other-images img{
-  max-height: 50vh;
-  width:100%;
-}
 .product .product-img{
   display:flex;
   width: 40%;
@@ -58,6 +54,18 @@ main .wrapper {
 .product .product-img img{
   width:100%;
   max-width:unset;
+  height:100%;
+}
+.product .swiper-button-next,
+.product .swiper-button-prev {
+  color:white;
+  margin:0;
+  z-index:2;
+  top:50%;
+  transform: translateY(-50%);
+  padding: 8px;
+}
+.product .swiper{
   max-height:50vh;
 }
 .product-info{
@@ -81,12 +89,18 @@ main .wrapper {
 .product-info .contact a{
   display:inline-flex;
   width:max-content;
-  padding: 0 8px;
+  padding: 4px 8px;
   font-weight: bold;
-  font-size: 18px;
   border: 1px solid #222;
   border-radius: 8px;
-  color:inherit;
+  color: white;
+  font-size: 20px;
+  background:#222;
+  transition: all 0.3s ease-out;
+}
+.product-info .contact a:hover{
+  background:white;
+  color:#222;
 }
 @media only screen and (max-width: 990px){
   .product{
@@ -98,6 +112,10 @@ main .wrapper {
   }
 }
 @media only screen and (max-width: 765px){
+  .product .swiper-button-next:after,
+  .product .swiper-button-prev:after{
+    font-size:32px;
+  }
   main .wrapper{
     padding: 30px 0 60px;
   }

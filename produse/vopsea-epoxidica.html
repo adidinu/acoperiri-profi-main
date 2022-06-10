@@ -12,6 +12,8 @@
 		/>
 		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 		<script src="/assets/scripts/navigation.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 		<title>Acoperiri Profesionale</title>
 	</head>
 	<body>
@@ -90,7 +92,20 @@
         <div class="product-wrapper">
           <div class="product">
             <div class="product-img">
-              <img src="/assets/poze/Vopsea-Epoxidica.jpg" alt="" />
+              <div class="swiper">
+                <div class="swiper-nav">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="/assets/poze/Vopsea-Epoxidica.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/assets/poze/Vopsea-Epoxidica-2.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="product-info">
               <div class="text">
@@ -106,14 +121,9 @@
 									aplicarii de pardoseli groase.
                 </div>
                 <div class="contact">
-                  <a href="/contact.html">Contactati-ne</a>
+                  <a href="/contact.html">Contactati-ne!</a>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="other-images">
-            <div class="product-img">
-              <img src="/assets/poze/Vopsea-Epoxidica-2.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -124,15 +134,11 @@
 				<div class="left-side">
 					<div class="footer-nav">
 						<ul>
-							<li><a href="#">Acasa</a></li>
-							<li><a href="#">Produse</a></li>
-							<li><a href="#">Despre noi</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="/">Acasa</a></li>
+							<li><a href="/produse.html">Produse</a></li>
+							<li><a href="/contact.html">Despre noi</a></li>
+							<li><a href="/contact.html">Contact</a></li>
 						</ul>
-					</div>
-					<div class="footer-links">
-						<a href="#">Facebook</a>
-						<a href="#">Instagram</a>
 					</div>
 				</div>
 				<div class="right-side">
@@ -140,11 +146,23 @@
 						<img src="/assets/poze/logo.svg" alt="" />
 					</div>
 					<div class="footer-contact">
-						<p>Contact at: <span>+40722204495</span></p>
-						<p>Address: <span>MUIE MIHAITA</span></p>
+						<p>Contact at: <span>+40770752098</span></p>
+						<p>Address: <span>Bucuresti, Sector 4, Berceni</span></p>
 					</div>
 				</div>
 			</div>
 		</footer>
+    <script>
+      const prodSwiper = new Swiper(`.swiper`, {
+            slidesPerView: 1,
+            spaceBetween: 8,
+            autoHeight: true,
+            loop: true,
+            navigation:{
+              "nextEl": `.swiper-nav .swiper-button-next`,
+              "prevEl": `.swiper-nav .swiper-button-prev`
+            }
+          });
+    </script>
 	</body>
 </html>
