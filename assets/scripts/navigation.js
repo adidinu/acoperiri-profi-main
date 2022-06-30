@@ -34,7 +34,7 @@ window.addEventListener('scroll', () => {
     }
   }
   else{
-    if(window.scrollY > header.offsetHeight - navWrapper.offsetHeight){
+    if(window.scrollY > header.offsetHeight - navWrapper.offsetHeight + 10){
         navWrapper.classList.add('sticky');
         document.querySelector('header + *').style.paddingTop = navWrapper.offsetHeight + "px";
       }
